@@ -137,6 +137,41 @@ a {
   padding: var(--padding10) 0;
 }
 
+/* profile */
+.down-section {
+  margin-top: auto;
+  padding: var(--padding10);
+}
+
+.down-section .install,
+.down-section .profile {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.down-section img {
+  width: 10px;
+}
+
+.install,
+.profile {
+  font-size: 10px;
+  margin: 5px;
+}
+
+.profile {
+  color: var(--main-color);
+}
+
+.profile-picture {
+  font-size: 40px;
+  background-color: var(--secondary-color);
+  padding: 2px;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
 /* HOME PAGE */
 .home-page {
   width: calc(100% - var(--side-bar-width));
@@ -208,6 +243,12 @@ footer {
   }
 
   .playlist-section {
+    display: none;
+  }
+
+  .down-section hr,
+  .down-section .install div,
+  .down-section .profile div {
     display: none;
   }
 }
