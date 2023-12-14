@@ -13,7 +13,7 @@ body {
   font-family: "Outfit", sans-serif;
   font-family: "Roboto", sans-serif;
 
-  color: white;
+  color: var(--text-color);
 }
 
 img {
@@ -42,7 +42,8 @@ a {
 :root {
   --footer-height: 75px;
   --side-bar-width: 150px;
-  --upper-bar-height: 100px;
+  --upper-bar-height: 70px;
+  --text-color: white;
 }
 
 /* MAIN */
@@ -62,11 +63,29 @@ a {
 }
 
 /* HOME PAGE */
+
+/* upper bar */
 .upper-bar {
   height: var(--upper-bar-height);
   background-color: #080b12;
+  padding-right: 10px;
   position: sticky;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
+
+.upper-bar button {
+  padding: 10px 35px;
+  background-color: #080b12;
+  color: var(--text-color);
+  border: 1px solid white;
+  border-radius: 1rem;
+  font-size: 10px;
+}
+
+/* main content */
 
 .main-content {
   height: calc(100% - var(--upper-bar-height));
