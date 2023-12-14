@@ -44,6 +44,7 @@ a {
   --side-bar-width: 175px;
   --upper-bar-height: 70px;
   --text-color: white;
+  --grey-color: #a3a3a3;
   --padding10: 10px;
 }
 
@@ -64,8 +65,11 @@ a {
 }
 
 /* SIDE BAR */
-.side-bar {
+
+/* logo */
+.logo-spotify {
   padding: var(--padding10);
+  margin-bottom: var(--padding10);
 }
 
 .logo-spotify .logo {
@@ -76,6 +80,37 @@ a {
   display: none;
   width: 100%;
 }
+
+/* nav */
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.home,
+.cerca,
+.libreria {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  padding: var(--padding10);
+}
+
+.home {
+  border-left: 3px solid #adff2f;
+}
+
+.cerca,
+.libreria {
+  color: var(--grey-color);
+}
+
+.nav img {
+  width: 25px;
+  padding-right: 5px;
+}
+
+/* playlist */
 
 /* HOME PAGE */
 /* upper bar */
