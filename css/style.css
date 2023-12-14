@@ -13,7 +13,7 @@ body {
   font-family: "Outfit", sans-serif;
   font-family: "Roboto", sans-serif;
 
-  color: var(--text-color);
+  color: var(--main-color);
 }
 
 img {
@@ -43,8 +43,8 @@ a {
   --footer-height: 75px;
   --side-bar-width: 175px;
   --upper-bar-height: 70px;
-  --text-color: white;
-  --grey-color: #a3a3a3;
+  --main-color: white;
+  --secondary-color: #a3a3a3;
   --padding10: 10px;
 }
 
@@ -54,17 +54,11 @@ a {
   height: calc(100vh - var(--footer-height));
 }
 
+/* SIDE BAR */
 .side-bar {
   width: var(--side-bar-width);
   background-color: black;
 }
-
-.home-page {
-  width: calc(100% - var(--side-bar-width));
-  background-color: #141922;
-}
-
-/* SIDE BAR */
 
 /* logo */
 .logo-spotify {
@@ -78,7 +72,7 @@ a {
 
 .logo-spotify .logo-small {
   display: none;
-  width: 100%;
+  width: 70%;
 }
 
 /* nav */
@@ -102,7 +96,7 @@ a {
 
 .cerca,
 .libreria {
-  color: var(--grey-color);
+  color: var(--secondary-color);
 }
 
 .nav img {
@@ -111,8 +105,44 @@ a {
 }
 
 /* playlist */
+.playlist-section {
+  padding: var(--padding10);
+  font-size: 10px;
+  color: var(--secondary-color);
+}
+
+.playlist {
+  padding: 20px 0;
+  color: var(--main-color);
+}
+
+.playlist-section .create-playlist {
+  color: var(--secondary-color);
+  padding: 5px;
+}
+
+.add-playlist {
+  display: flex;
+  align-items: center;
+}
+
+.add {
+  padding: 5px;
+  color: black;
+  background-color: var(--secondary-color);
+}
+
+.playlist-section .playlist-name {
+  color: var(--secondary-color);
+  padding: var(--padding10) 0;
+}
 
 /* HOME PAGE */
+.home-page {
+  width: calc(100% - var(--side-bar-width));
+  background-color: #141922;
+}
+
 /* upper bar */
 .upper-bar {
   height: var(--upper-bar-height);
@@ -128,7 +158,7 @@ a {
 .upper-bar button {
   padding: 10px 35px;
   background-color: #080b12;
-  color: var(--text-color);
+  color: var(--main-color);
   border: 1px solid white;
   border-radius: 1rem;
   font-size: 10px;
@@ -166,6 +196,18 @@ footer {
   }
 
   .logo-spotify .logo {
+    display: none;
+  }
+
+  .nav span {
+    display: none;
+  }
+
+  .home {
+    border-left: 0;
+  }
+
+  .playlist-section {
     display: none;
   }
 }
