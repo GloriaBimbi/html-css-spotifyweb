@@ -41,9 +41,10 @@ a {
 
 :root {
   --footer-height: 75px;
-  --side-bar-width: 150px;
+  --side-bar-width: 175px;
   --upper-bar-height: 70px;
   --text-color: white;
+  --padding10: 10px;
 }
 
 /* MAIN */
@@ -62,13 +63,26 @@ a {
   background-color: #141922;
 }
 
-/* HOME PAGE */
+/* SIDE BAR */
+.side-bar {
+  padding: var(--padding10);
+}
 
+.logo-spotify .logo {
+  width: 100px;
+}
+
+.logo-spotify .logo-small {
+  display: none;
+  width: 100%;
+}
+
+/* HOME PAGE */
 /* upper bar */
 .upper-bar {
   height: var(--upper-bar-height);
   background-color: #080b12;
-  padding-right: 10px;
+  padding-right: var(--padding10);
   position: sticky;
 
   display: flex;
@@ -108,4 +122,15 @@ footer {
 }
 
 @media screen and (max-width: 576px) {
+  :root {
+    --side-bar-width: 50px;
+  }
+
+  .logo-spotify .logo-small {
+    display: block;
+  }
+
+  .logo-spotify .logo {
+    display: none;
+  }
 }
