@@ -60,6 +60,11 @@ a {
   background-color: black;
 }
 
+.side-bar:last-child {
+  margin-top: auto;
+  padding: var(--padding10);
+}
+
 /* logo */
 .logo-spotify {
   padding: var(--padding10);
@@ -138,11 +143,6 @@ a {
 }
 
 /* profile */
-.down-section {
-  margin-top: auto;
-  padding: var(--padding10);
-}
-
 .down-section .install,
 .down-section .profile {
   display: flex;
@@ -150,7 +150,7 @@ a {
   gap: 5px;
 }
 
-.down-section img {
+.down-section .install img {
   width: 10px;
 }
 
@@ -168,8 +168,12 @@ a {
   font-size: 40px;
   background-color: var(--secondary-color);
   padding: 2px;
+}
+
+.profile-picture {
   border-radius: 50%;
   aspect-ratio: 1;
+  width: 20px;
 }
 
 /* HOME PAGE */
