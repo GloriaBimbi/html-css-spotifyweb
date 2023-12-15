@@ -150,8 +150,16 @@ a {
   gap: 5px;
 }
 
+.down-section .install {
+  color: var(--secondary-color);
+}
+
 .down-section .install img {
   width: 10px;
+}
+
+.down-section hr {
+  margin: 0 5px;
 }
 
 .install,
@@ -233,6 +241,10 @@ a {
   color: #adff2f;
 }
 
+.category li:hover {
+  color: var(--main-color);
+}
+
 /* recent, created, popular */
 .recent,
 .created,
@@ -261,20 +273,19 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 7px;
+
+  max-width: 120px;
 }
+
 .recent-list .recent-element img,
 .created-list .created-element img,
 .popular-list .popular-element img {
-  width: 100px;
+  /* position: relative; */
 }
 
 .popular-list .popular-element img {
   border-radius: 50%;
 }
-
-/* .recent-list img:hover {
-  backdrop-filter: brightness (50%);
-} */
 
 .recent-list .recent-element h3,
 .created-list .created-element h3,
@@ -290,10 +301,44 @@ a {
   padding-bottom: var(--padding10);
 }
 
+/* .player {
+  display: none;
+  color: white;
+  width: 20px;
+
+  position: absolute;
+  bottom: 50px;
+} */
+
 /* FOOTER */
 footer {
   height: var(--footer-height);
   background-color: #282828;
+}
+
+/* hover */
+.nav > div:hover,
+.playlist-section .add-playlist:hover,
+.playlist-section li:hover,
+.down-section .install:hover {
+  filter: brightness(200%);
+  cursor: pointer;
+  color: white;
+}
+
+.upper-bar button:hover {
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.recent-list .recent-element img:hover,
+.created-list .created-element img:hover,
+.popular-list .popular-element img:hover {
+  filter: brightness(50%);
+}
+
+.recent-list .recent-element img:hover .player {
+  display: block;
 }
 
 /* MEDIA QUARY */
