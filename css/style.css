@@ -314,16 +314,50 @@ a {
 footer {
   height: var(--footer-height);
   background-color: #282828;
+  padding: var(--padding10);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* song */
+.flex-container-song img {
+  max-height: 40px;
+}
+
+.flex-container-song h1 {
+  font-size: 10px;
+}
+
+.flex-container-song h4 {
+  font-size: 8px;
+  color: var(--secondary-color);
+}
+
+.flex-container-song {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-icons {
+  padding-left: 20px;
+  color: var(--secondary-color);
+}
+.fa-heart {
+  padding: 5px var(--padding10) 5px 0;
 }
 
 /* hover */
 .nav > div:hover,
 .playlist-section .add-playlist:hover,
 .playlist-section li:hover,
-.down-section .install:hover {
+.down-section .install:hover,
+.flex-container-song h4:hover {
   filter: brightness(200%);
   cursor: pointer;
-  color: white;
+  color: var(--main-color);
 }
 
 .upper-bar button:hover {
@@ -341,6 +375,10 @@ footer {
   display: block;
 }
 
+.flex-container-song h4:hover {
+  text-decoration: underline;
+}
+
 /* MEDIA QUARY */
 
 @media screen and (max-width: 992px) {
@@ -352,6 +390,11 @@ footer {
 @media screen and (max-width: 768px) {
   .recent-list {
     flex-wrap: wrap;
+  }
+
+  .footer-icons {
+    display: flex;
+    flex-direction: column;
   }
 }
 
