@@ -344,6 +344,7 @@ footer {
 .song-icons {
   padding-left: 20px;
   color: var(--secondary-color);
+  font-size: 10px;
 }
 .fa-heart {
   padding: 5px var(--padding10) 5px 0;
@@ -402,6 +403,30 @@ footer {
 }
 
 /* volume */
+.volume-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.volume-section i {
+  font-size: 10px;
+}
+
+.volume-section .volume-bar {
+  width: 100px;
+  height: 4px;
+  background-color: #5a5a5a;
+  border-radius: 4px;
+}
+
+.volume-section .volume-bar > .volume-progress {
+  width: 30%;
+  height: 100%;
+  background-color: #c1c1c1;
+
+  position: relative;
+}
 
 /* HOVER */
 .nav > div:hover,
@@ -433,7 +458,8 @@ footer {
   text-decoration: underline;
 }
 
-.reproduction-bar .play-bar:hover > .progress::after {
+.reproduction-bar .play-bar:hover > .progress::after,
+.volume-section .volume-bar:hover > .volume-progress::after {
   content: "";
 
   position: absolute;
@@ -447,7 +473,8 @@ footer {
   border-radius: 50%;
 }
 
-.reproduction-bar .play-bar:hover > .progress {
+.reproduction-bar .play-bar:hover > .progress,
+.volume-section .volume-bar:hover > .volume-progress {
   background-color: #adff2f;
 }
 
@@ -504,8 +531,20 @@ footer {
     display: none;
   }
 
+  .song-icons {
+    padding-left: 3px;
+  }
+
   .reproduction-bar .play-bar {
     width: 100px;
     margin: 3px;
+  }
+
+  .volume-section {
+    flex-direction: column;
+  }
+
+  .volume-section .volume-bar {
+    width: 75px;
   }
 }
